@@ -9,9 +9,9 @@
 * [ErrorMessage](#errormessage)
 * [Regax](#regax)
 * [Separator](#separator)
+* [Range](#range)
 * [equals](#equals)
 * [hashCode](#hashcode)
-
 
 
 <br>
@@ -168,6 +168,22 @@ private static void validate(String value) {
             throw new IllegalArgumentException();
         }
     }
+```
+
+<br>
+
+## Range
+
+```java
+private static void validate(String value) {
+	try {
+		if (Integer.parseInt(value) < 0) {
+			throw new IllegalArgumentException();
+		}
+	} catch (NumberFormatException exception) {
+		throw new IllegalArgumentException();
+	}
+}
 ```
 
 <br>
