@@ -6,6 +6,9 @@
 * [InputController](#inputcontroller)
 * [InputView](#inputview)
 * [OutputView](#outputview)
+* [ErrorMessage](#errormessage)
+* [Regax](#regax)
+* [Separator](#separator)
 
 
 <br>
@@ -115,4 +118,52 @@ public class OutputView {
 ```
 
 <br>
+
+## ErrorMessge
+
+```java
+public enum ErrorMessage {
+
+    INVALID_XX("유효하지 않은 값입니다."),
+
+    RETRY_INPUT("다시 입력해 주세요.");
+
+    private final String message;
+
+    Message(String message) {
+        this.message = message;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+}
+```
+
+<br>
+
+## Regax
+
+```java
+public static final Pattern NUMERIC_PATTERN = Pattern.compile("^[0-9]+$");
+public static final Pattern KOREAN_AND_ENGLISH_PATTERN = Pattern.compile("^[ㄱ-ㅎ가-힣A-Za-z]+$");
+```
+
+<br>
+
+## Separator
+
+```java
+private static void validate(String value) {
+        if (value.trim().isEmpty()) {
+            throw new IllegalArgumentException();
+        }
+        if (value.startsWith(";") || value.endsWith(";")) {
+            throw new IllegalArgumentException();
+        }
+        if (value.contains(";;")) {
+            throw new IllegalArgumentException();
+        }
+    }
+```
 
