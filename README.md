@@ -164,7 +164,7 @@ private static void validate(String value) {
         if (value.startsWith(",") || value.endsWith(",")) {
             throw new IllegalArgumentException();
         }
-        if (value.contains(",")) {
+        if (value.contains(",,")) {
             throw new IllegalArgumentException();
         }
     }
