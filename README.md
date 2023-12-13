@@ -9,6 +9,9 @@
 * [ErrorMessage](#errormessage)
 * [Regax](#regax)
 * [Separator](#separator)
+* [equals](#equals)
+* [hashCode](#hashcode)
+
 
 
 <br>
@@ -167,3 +170,28 @@ private static void validate(String value) {
     }
 ```
 
+<br>
+
+## equals 
+
+```java
+@Override
+public boolean equals(Object obj) {
+	if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof Model model)) {
+            return false;
+        }
+	return // TODO:
+}
+```
+
+## hashCode
+
+```java
+@Override
+public int hashCode() {
+	return Objects.hash(vo);
+}
+```
