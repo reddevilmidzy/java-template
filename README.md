@@ -12,6 +12,7 @@
 * [Range](#range)
 * [equals](#equals)
 * [hashCode](#hashcode)
+* [comma](#comma)
 
 
 <br>
@@ -203,6 +204,8 @@ public boolean equals(Object obj) {
 }
 ```
 
+<br>
+
 ## hashCode
 
 ```java
@@ -211,3 +214,17 @@ public int hashCode() {
 	return Objects.hash(vo);
 }
 ```
+
+<br>
+
+## comma
+
+```java
+public static final DecimalFormat NUMBER_FORMAT = new DecimalFormat("###,###");
+
+private String formatted(Integer value) {
+        return NUMBER_FORMAT.format(value);
+    }
+```
+
+<br>
