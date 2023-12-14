@@ -2,19 +2,24 @@
 
 **코드 템플릿**
 
-* [Controller](#controller)
-* [InputController](#inputcontroller)
-* [InputView](#inputview)
-* [OutputView](#outputview)
-* [ErrorMessage](#errormessge)
-* [Regax](#regax)
-* [Separator](#separator)
-* [Range](#range)
-* [equals](#equals)
-* [hashCode](#hashcode)
-* [comma](#comma)
-* [map foreach](#map-foreach)
-* [list foreach](#list-foreach)
+* **Controller**
+	* [Controller](#controller)
+	* [InputController](#inputcontroller)
+* **View**
+	* [InputView](#inputview)
+	* [OutputView](#outputview)
+	* [number comma](#comma)
+* **Constant**
+	* [ErrorMessage](#errormessge)
+* **Model**
+	* [equals](#equals)
+	* [hashCode](#hashcode)
+	* [map foreach](#map-foreach)
+	* [list foreach](#list-foreach)
+* **Validate**
+	* [Regax](#regax)
+	* [Separator](#separator)
+	* [Range](#range)
 
 
 
@@ -25,16 +30,21 @@
 ```text
 # 구현 기능 목록
 
+
 ## 기능
+
 
 
 ## 입력
 
 
+
 ## 출력
 
 
+
 ## 예외
+
 
 ```
 
@@ -120,6 +130,7 @@ public class OutputView {
 
     public void printErrorMessage(Throwable throwable) {
         System.out.printf(ERROR_FORM, throwable.getMessage());
+	System.out.println();
     }
 }
 ```
@@ -200,7 +211,7 @@ public boolean equals(Object obj) {
 	if (this == obj) {
             return true;
         }
-        if (!(obj instanceof Model model)) {
+        if (!(obj instanceof X target)) {
             return false;
         }
 	return // TODO:
