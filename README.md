@@ -13,6 +13,8 @@
 * [equals](#equals)
 * [hashCode](#hashcode)
 * [comma](#comma)
+* [map foreach](#map-foreach)
+
 
 
 <br>
@@ -228,3 +230,22 @@ private String formatted(Integer value) {
 ```
 
 <br>
+
+
+## map foreEach
+
+```java
+public void forEach(BiConsumer<? super K, ? super V> action) {
+        map.forEach(action);
+    }
+```
+
+<br>
+
+## list forEach
+
+```java
+public void forEach(Consumer<? super T> action) {
+	list.forEach(action);
+}
+```
