@@ -14,6 +14,7 @@
 * [hashCode](#hashcode)
 * [comma](#comma)
 * [map foreach](#map-foreach)
+* [list foreach](#list-foreach)
 
 
 
@@ -232,7 +233,7 @@ private String formatted(Integer value) {
 <br>
 
 
-## map foreEach
+## map forEach
 
 ```java
 public void forEach(BiConsumer<? super K, ? super V> action) {
