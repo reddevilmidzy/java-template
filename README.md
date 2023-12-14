@@ -17,6 +17,7 @@
 	* [hashCode](#hashcode)
 	* [map foreach](#map-foreach)
 	* [list foreach](#list-foreach)
+ 	* [enum static method](#valueof)
 * **Validate**
 	* [Regax](#regax)
 	* [Separator](#separator)
@@ -277,4 +278,18 @@ public void forEach(BiConsumer<? super K, ? super V> action) {
 public void forEach(Consumer<? super T> action) {
 	list.forEach(action);
 }
+```
+
+<br>
+
+## valueof
+
+```java
+
+    public static ENUM_TYPE valueOfName(String name) {
+        return Arrays.stream(values())
+                .filter(s -> s.cmd.equals(name))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException(ErrorMessage.));
+    }
 ```
