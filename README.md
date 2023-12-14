@@ -9,6 +9,7 @@
 	* [InputView](#inputview)
 	* [OutputView](#outputview)
 	* [number comma](#comma)
+ 	* [iterator](#iterator) 
 * **Constant**
 	* [ErrorMessage](#errormessge)
 * **Model**
@@ -238,6 +239,22 @@ public static final DecimalFormat NUMBER_FORMAT = new DecimalFormat("###,###");
 
 private String formatted(Integer value) {
         return NUMBER_FORMAT.format(value);
+    }
+```
+
+<br>
+
+## iterator
+
+```java
+private void printValues(Iterator<Crew> iterator) {
+        while (iterator.hasNext()) {
+            System.out.print(iterator.next().getName());
+            if (iterator.hasNext()) {
+                System.out.print(" : ");
+            }
+        }
+        System.out.println();
     }
 ```
 
