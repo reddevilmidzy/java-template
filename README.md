@@ -6,7 +6,7 @@
 * [InputController](#inputcontroller)
 * [InputView](#inputview)
 * [OutputView](#outputview)
-* [ErrorMessage](#errormessage)
+* [ErrorMessage](#errormessge)
 * [Regax](#regax)
 * [Separator](#separator)
 * [Range](#range)
