@@ -72,7 +72,6 @@ public void run() {
 ## InputController
 
 ```java
-public class InputController {
 
     private final InputView inputView;
     private final OutputView outputView;
@@ -97,7 +96,7 @@ public class InputController {
 		String value = inputView.readXX();
 		return XX.from(value);
 	}
-}
+
 ```
 
 <br>
@@ -106,7 +105,7 @@ public class InputController {
 
 ```java
 
-public class InputView {
+
 
     public String readXX() {
         System.out.println("blah blah");
@@ -118,7 +117,7 @@ public class InputView {
     protected String readLine() {
         return Console.readLine();
     }
-}
+
 ```
 
 <br>
@@ -126,7 +125,7 @@ public class InputView {
 ## OutputView
 
 ```java
-public class OutputView {
+
 
     public static final String ERROR_FORM = "[ERROR] %s%n";
 
@@ -134,7 +133,7 @@ public class OutputView {
         System.out.printf(ERROR_FORM, throwable.getMessage());
 	System.out.println();
     }
-}
+
 ```
 
 <br>
@@ -142,7 +141,7 @@ public class OutputView {
 ## ErrorMessge
 
 ```java
-public enum ErrorMessage {
+
 
     INVALID_XX("유효하지 않은 값입니다."),
 
@@ -150,14 +149,14 @@ public enum ErrorMessage {
 
     private final String message;
 
-    Message(String message) {
+    ErrorMessage(String message) {
         this.message = message;
     }
 
     public String getMessage() {
         return message;
     }
-}
+
 ```
 
 <br>
