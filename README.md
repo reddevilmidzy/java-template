@@ -57,7 +57,11 @@
 ```java
 private final InputController inputController;
 private final OutputView outputView;
+```
 
+<br>
+
+```java
 public Controller(InputController inputController, OutputView outputView) {
     this.inputController = inputController;
     this.outputView = outputView;
